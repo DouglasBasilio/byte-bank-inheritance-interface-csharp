@@ -11,7 +11,7 @@ namespace ByteBankOPP.Funcionarios
         
         public override double GetBonificacao() // sobrepondo o método da classe Funcionario
         {
-            return Salario;
+            return Salario + base.GetBonificacao(); // base - referência da classe Funcionario
         }
     }
 }
