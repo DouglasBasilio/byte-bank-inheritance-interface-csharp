@@ -7,10 +7,21 @@ using System.Threading.Tasks;
 namespace ByteBankOPP.Funcionarios
 {
     public class Funcionario
-    {
+    {     
+        public static int TotalDeFuncionarios { get; private set; }
+
         public string Nome { get; set; }
-        public string CPF { get; set; }
+        public string CPF { get; private set; }
         public double Salario { get; set; }
+
+        public Funcionario(string cpf) // primeiro é executado o construtor da classe base e depois da classe derivada
+        {
+            Console.WriteLine("Criando FUNCIONARIO");
+
+            CPF = cpf;
+
+            TotalDeFuncionarios++;
+        }
 
         public virtual double GetBonificacao() // método virtual, tem uma implementação, mas é possível sobrescrever
         {
