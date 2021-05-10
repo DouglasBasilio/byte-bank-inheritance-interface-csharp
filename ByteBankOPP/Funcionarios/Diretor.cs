@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace ByteBankOPP.Funcionarios
 {
-    public class Diretor
+    public class Diretor : Funcionario // através dos 'dois pontos' eu extendo a classe funcionario para diretor
     {
-        public string Nome { get; set; }
-        public string CPF { get; set; }
-        public double Salario { get; set; }
-
+        
         public double GetBonificacao()
         {
             return Salario;
