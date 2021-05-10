@@ -12,7 +12,7 @@ namespace ByteBankOPP.Funcionarios
         public string CPF { get; set; }
         public double Salario { get; set; }
 
-        public double GetBonificacao()
+        public virtual double GetBonificacao() // método virtual, tem uma implementação, mas é possível sobrescrever
         {
            return Salario * 0.10;
         }
