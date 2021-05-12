@@ -8,7 +8,7 @@ namespace ByteBankOPP.Funcionarios
 {
     public class Diretor : Funcionario // através dos 'dois pontos' eu extendo a classe funcionario para diretor
     {
-        public Diretor(string cpf) : base(5000, cpf)
+        public Diretor(string cpf) : base(5000, cpf) // herda o construtor da base
         {
             Console.WriteLine("Criando DIRETOR");
         }
