@@ -13,10 +13,12 @@ namespace ByteBankOPP
         {
             GerenciadorBonificacao gerenciador = new GerenciadorBonificacao();
 
-            Funcionario douglas = new Funcionario("123.123.123-54");
+            Funcionario douglas = new Funcionario(2000, "123.123.123-54");
 
             douglas.Nome = "Douglas";
-            douglas.Salario = 2000;
+
+            douglas.AumentarSalario();
+            Console.WriteLine("Novo salário do Douglas " + douglas.Salario);
 
             Console.WriteLine(Funcionario.TotalDeFuncionarios);
 
@@ -25,7 +27,9 @@ namespace ByteBankOPP
             Diretor felipe = new Diretor("312.312.312-43");
             felipe.Nome = "Felipe";
             //felipe.CPF = "312.312.312-43";
-            felipe.Salario = 5000;
+
+            felipe.AumentarSalario();
+            Console.WriteLine("Novo salário do Felipe " + felipe.Salario);
 
             Console.WriteLine(Funcionario.TotalDeFuncionarios);
 
